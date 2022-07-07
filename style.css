@@ -86,6 +86,7 @@ h4{
   align-self: fiex-end;
 }
 .image img{
+  
   position: absolute;
   bottom: 0;
   height: 100%;
@@ -131,6 +132,7 @@ h4{
      font-size: 4.65rem;
      margin: 1.7rem 0;
    }
+  
   /*-------------page skills-----------*/
    .skills{
      flex-grow: 1;
@@ -139,8 +141,8 @@ h4{
      align-items: center;
      justify-content: space-between;
      background-color: var(--bgcolor-1);
-     width: 100%;
-     height: 100vh;
+     width:100%;
+     height:100vh;
    
    }
   .skills.container-skills{
@@ -209,4 +211,205 @@ footer{
 .icons img:hover{
   transform: scale(1.2);
 }
+/*-------------button menu-----------*/
+#menu {
+  display: none;
+  position: relative;
+  appearance: none;
+  border: none;
+  outline: none;
+  background-color: none;
+  cursor: pointer;
+  user-select: none;
+  background-color: var(--bgcolor-1)
+}
+#menu span {
+  display:block;
+  width: 33px;
+  height: 4px;
+  background-color: var(--primarycolor);
+  border-radius: 6px;
+  transform-origin: 0 0;
+  transition: 0.4s;
+  margin-bottom: 5px;
+}
+#menu.is-active span:nth-child(1){
+  transform: translate(0px,-2px) rotate(45deg);
+}
+#menu.is-active span:nth-child(2) { 
+  opacity: 0;
+  transform: translate(15px);
+}
+#menu.is-active span:nth-child(3){
+  transform: translate(-3px,3px) rotate(-45deg);
+}
+#menu.is-active span{
+  align-items: center;
+  background-color: var(--primarycolor);
+}
+/*-------------view phone-----------*/
+  @media screen and (max-width:575px) {
+ :root{
+  --padding:1.5rem;
+ }
+ html{
+  font-size: 13px;
+ }
+ .image{
+    display: none;
+   }
+ nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 82px;
+  padding-top: 0;
+  background-color: var(--bgcolor-1);
+  border-bottom: 1px soild var(--bgcolor-2);
+  z-index: 100;
+ }
+ nav ul{
+ display: none;
+ position: fixed;
+ top: 0;
+ text-align:center;
+ left: 0;
+ height: 100vh;
+ width: 100vh;
+ background-color: var(--bgcolor-1);
+ } 
+ nav ul.is-active{
+  display: block;
+ }
+ nav ul li{
+  display: block;
+  text-align:left;
+  align-items: center;
+  font-size: 20px;
+  margin:50px;
+  padding: 0;
+ }
+ #menu{
+  display: block;
+ }
+ /*--------------page About me-----------*/ 
+.aboutme{
+  margin: 0;
+  display: flex;
+  background-color: var(--bgcolor-2);
+  padding:0.1rem var(--padding);
+  width: 100%;
+  height: 80vh;
+   align-items: center;
+   justify-content: space-around;
+   }
+ .image{
+     display: none;}
+
+   .text{
+     width: 100%;
+   }
+     /*-------------page skills-----------*/
+     
+   .skills.container-skills{
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column; 
+   }
+   .content-skills{
+     width: 98%;
+     display: flex;
+     flex-wrap: wrap; 
+   } 
+  
+ .skills .images{
+  display: none;
+ }
  
+  }
+  @media screen and (min-width:576px)and (max-width:767px) {
+    :root{
+     --padding:1.5rem;
+    }
+    html{
+     font-size: 13px;
+    }
+    .image{
+       display: none;
+      }
+    nav{
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     height: 82px;
+     padding-top: 0;
+     background-color: var(--bgcolor-1);
+     border-bottom: 1px soild var(--bgcolor-2);
+     z-index: 100;
+    }
+    nav ul{
+    display: none;
+    position: fixed;
+    top: 0;
+    text-align:center;
+    left: 0;
+    height: 100vh;
+    width: 100vh;
+    background-color: var(--bgcolor-1);
+    } 
+    nav ul.is-active{
+     display: block;
+    }
+    nav ul li{
+     display: block;
+     text-align:left;
+     align-items: center;
+     font-size: 20px;
+     margin:50px;
+     padding: 0;
+    }
+    #menu{
+     display: block;
+    }
+   
+    /*--------------page About me-----------*/ 
+   .aboutme{
+     margin: 0;
+     display: flex;
+     background-color: var(--bgcolor-2);
+     padding:0.1rem var(--padding);
+     width: 100%;
+     height: 100vh;
+      align-items: center;
+      justify-content: space-around;
+      }
+    .image{
+        display: none;}
+   
+      .text{
+        width: 40%;
+      }
+        /*-------------page skills-----------*/
+        
+      .skills.container-skills{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; 
+      }
+      .content-skills{
+        width: 98%;
+        display: flex;
+        flex-wrap: wrap; 
+      } 
+     
+    .skills .images{
+     display: none;
+    }
+    
+     }
